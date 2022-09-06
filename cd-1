@@ -1,0 +1,44 @@
+///write a program that all the strings whose decimal value divisible by 4 is accepted otherwise rejected 
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+
+int string_end_with_aab(char str[]){
+  int len = strlen(str);
+  int i =len -1;
+  for(i; i > 0; i--){
+      int k = 0;
+      printf("%chi", str[i]);
+    if(str[i] == 'b' && k < 2){
+        k++;
+        continue;
+    }
+    
+    if(str[i] == 'a' && k == 2){
+        continue;
+    }else{
+        break;
+    }
+    
+  }
+  return i;
+ 
+}
+
+
+
+int main() {
+    // Write C code here
+    //char input1[3] = {'a','b','b'};
+    char input[5] = {'b', 'a', 'a','a', 'b'};
+    
+    int res  = string_end_with_aab(input);
+    printf("%d", res);
+    if(res >= strlen(input) -3){
+         printf ("%d",1);
+    }else {
+      printf ("%d",-1);
+    }
+   
+    return 0;
+}
