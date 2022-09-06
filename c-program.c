@@ -24,4 +24,29 @@ int main() {
 }
 ////////////////////END THE PROGRAM ///////////////////////////
 
+////// palidrom number ////////////////////////////////
+
+
+void palidrom(){
+    printf("Enter a number\n");
+    int n, res, q, rem;
+    n = res = q = rem = 0;
+    scanf("%d", &n);
+     q = n;
+     while(q != 0){
+         rem = q % 10;
+         res = res * 10 + rem;
+         q = q/10;
+     }
+     
+     if(res == n){
+        printf("yes it is palidrom");
+     }else{
+         return -1;
+     }
+}
+
+////////////////////END THE PROGRAM ///////////////////////////
+
+
 
